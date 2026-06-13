@@ -15,12 +15,12 @@ if ($GLOBALS['DEBUG'] !== true) {
 
 //Set globals
 $apiKey = getenv('SECRET_API_KEY');
-$playVodUrl = "[[SERVER_URL]]/play.php";
+$playVodUrl = "https://play.numberone.cl/play.php";
 $totalPages = 300; // Added more pages due to strict filters.
 $minYear = 1970; // Skip older titles
 $minRuntime = 30; // In Minutes. Works with /discover only.
-$language = 'en-US';
-$movies_with_origin_country = 'US';
+$language = 'pt-BR';
+$movies_with_origin_country = 'BR|CL|AR|CO|MX';
 $num = 0;
 $outputData = [];
 $outputContent = "#EXTM3U\n";
@@ -356,3 +356,4 @@ function isValidMovie($movie) {
     return $year >= $minYear;
 }
 ?>
+
