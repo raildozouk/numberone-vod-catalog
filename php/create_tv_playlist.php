@@ -12,11 +12,11 @@ if ($GLOBALS['DEBUG'] !== true) {
 
 //Set globals
 $apiKey = getenv('SECRET_API_KEY');
-$playVodUrl = "[[SERVER_URL]]/play.php";
+$playVodUrl = "https://play.numberone.cl/play.php";
 $totalPages = 250;
 $minYear = 1970; // Skip older titles
-$language = 'en-US';
-$series_with_origin_country = 'US';
+$language = 'pt-BR';
+$series_with_origin_country = 'BR|CL|AR|CO|MX';
 $num = 0;
 $outputData = [];
 $outputContent = "#EXTM3U\n";
@@ -518,3 +518,4 @@ function isValidSeries($series) {
     return $year >= $minYear;
 }
 ?>
+
